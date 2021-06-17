@@ -9,17 +9,29 @@
 <body>
     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate nobis impedit voluptatum maxime. Neque reiciendis id voluptas sequi, nostrum eaque voluptatem, delectus adipisci nisi placeat nesciunt pariatur voluptatum architecto.</h2>
     <ul></ul>
+    <svg width="300px" height="300px"></svg>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
     heros = ['Hulk', 'Dr. Strange', 'spiderman'];
     // we can select anything using d3.select
+    // use <svg> for any type of graph
     d3.select('h2').style('font-size', "50px");
     d3.select("ul")
     .selectAll("li")
     .data(heros)
     .enter()
     .append("li")
-    .text(hero => hero);
+    .text(hero => hero + "!");
+    var numbers = [20, 30, 50, 60, 30, 10];
+    var barWeight = 40;
+    d3.select("svg")
+        .selectAll("rect")
+        .data(numbers)
+        .enter()
+        .append("rect")
+        .attr("width", d => d)
+        .attr("height", barWeight - 4)
+        .attr("transform", (d, i) => "translate(100," + i * barWeight + ")");
     </script>
 </body>
 </html>
