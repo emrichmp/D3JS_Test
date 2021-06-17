@@ -8,9 +8,18 @@
 </head>
 <body>
     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate nobis impedit voluptatum maxime. Neque reiciendis id voluptas sequi, nostrum eaque voluptatem, delectus adipisci nisi placeat nesciunt pariatur voluptatum architecto.</h2>
+    <ul></ul>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
+    heros = ['Hulk', 'Dr. Strange', 'spiderman'];
+    // we can select anything using d3.select
     d3.select('h2').style('font-size', "50px");
+    d3.select("ul")
+    .selectAll("li")
+    .data(heros)
+    .enter()
+    .append("li")
+    .text(hero => hero);
     </script>
 </body>
 </html>
