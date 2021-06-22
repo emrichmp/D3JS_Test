@@ -6,3 +6,4 @@ Tasks done:
 
 Methods used:
 - select - selects html attr
+- data - takes data to be used as arg
