@@ -5,3 +5,4 @@ Tasks done:
 - Made small test graph with randome number data
 
 Methods used:
+- select - selects html attr
