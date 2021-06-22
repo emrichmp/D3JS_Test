@@ -5,6 +5,7 @@ Tasks done:
 - Made small test graph with randome number data
 
 Methods used:
-- select - selects html attr
+- select - selects html element
 - data - takes data to be used as arg
- - append - use to add html attr
+- append - use to add html element
+- attr - select attr of an html element
